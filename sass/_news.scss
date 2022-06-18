@@ -1,0 +1,331 @@
+@import'reset';
+@import'common';
+@import'responsive';
+@import'variable';
+
+.l_news_inner {
+
+}
+
+.l_news_wrapper {
+    margin-top: 80px;
+    padding-bottom: 60px;
+    flex-wrap:wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.l_news_main_content {
+    width: calc(70% - 40px / 2);
+    @include mq('sm') {
+        width: 100%;
+    }
+    @include mq('md') {
+        width: 100%;
+    }
+}
+
+.l_news_main_title {
+    font-size: 32px;
+    font-weight: bold;
+}
+.l_news_post_lists {
+    margin-top: 30px;
+}
+.l_news_post_list {
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+
+}
+.l_news_post_list_article {
+    a {
+        display: flex;
+    }
+}
+.l_news_post_list_img {
+    width: 40%;
+    &.single_post {
+        width: 100%;
+    }
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .wp-post-image {
+        width:100%;
+    }
+}
+.l_news_post_list_body {
+    width: 60%;
+    margin-left: 15px;
+    padding: 10px 0 40px;
+}
+.l_news_post_list_body_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.l_news_post_list_cate_name {
+    padding: 8px 24px;
+    color: #E61264;
+    border: 1px solid #E61264;
+}
+.l_news_post_list_title {
+    margin-top: 20px;
+}
+.l_news_paginate {
+
+} 
+.paginate_items {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.page-numbers,.current,.next,.prev {
+    // display: block;
+    &:not(:first-child) {
+        margin-left: 14px;
+    }
+}
+.page-numbers  {
+    padding: 13px 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: #F8F8F8;
+    color: #888;
+}
+.current {
+
+}
+.next {
+
+}
+.prev {
+
+}
+.next,.prev {
+
+}
+
+
+
+.l_sidebar {
+    width: calc(30% - 40px / 2);
+    @include mq('sm') {
+        width: 100%;
+    }
+    @include mq('md') {
+        width: 100%;
+    }
+}
+.l_sidebar_title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.l_sidebar_posts_lists {
+    margin-bottom: 60px;
+}
+.l_sidebar_posts_list {
+    margin-top: 15px;
+}
+.l_sidebar_posts_list_article {
+    a {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.l_sidebar_posts_list_figure {
+    width: calc(33.333% - 10px / 2);
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: unquote('min(100%,100px)') ;
+    }
+}
+.l_sidebar_posts_list_body {
+    width: calc(66.6666% - 10px / 2);
+}
+.l_sidebar_posts_list_body_top {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 10px;
+    time {
+        font-size: 14px;
+        color: #888;
+    }
+}
+.l_news_post_list_cate_name {
+    &.sidebar {
+        font-size: 12px;
+        padding: 8px 11px;
+    }
+}
+.l_sidebar_posts_list_title {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height:calc(20 / 14);
+}
+
+.l_sidebar_posts_cate_lists {
+    margin-top: 16px;
+    border-top:1px solid #ccc;
+}
+.l_sidebar_posts_cate_list {
+    border-bottom:1px solid #ccc;
+    a {
+        display: block;
+        padding: 16px 0 16px 40px;
+        position: relative;
+        &:hover {
+            &::after {
+                top: 50%;
+                transform: rotate(0);
+                transform-origin: right;
+            }
+            &::before {
+                bottom: 50%;
+                transform: rotate(0);
+                transform-origin: right;
+            }
+        }
+        &::before {
+            transition: transform 1s ease 0s;
+            transform-origin: right;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform:  rotate(45deg);
+            width: 10px;
+            height: 2px;
+            background-color: #023E78;
+            z-index: 1;
+        }
+        &::after {
+            transition: transform 1s ease 0s;
+            transform-origin: right;
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            left: 10px;
+            transform:  rotate(-45deg);
+            width: 10px;
+            height: 2px;
+            background-color: #023E78;
+            z-index: 1;
+
+        }
+    }
+}
+
+////////
+//single-page
+///////
+.l_news_single_post_wrapper {
+
+}
+
+.single_post_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.l_news_single_post {
+
+}
+.l_news_single_post_article {
+
+}
+.l_news_single_post_body {
+    h2,h3,h4 {
+        margin-top: 40px;
+        font-weight: bold;
+        color: #023E78;
+        margin-bottom: 20px;
+    }
+    h2 {
+        background-color: #F8F8F8;
+        padding: 10px 26px;
+        border-left: 6px solid #023E78;
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+        padding: 7px 0;
+        border-bottom:1px solid #023E78;
+    }
+    h4 {
+        margin-bottom: 16px;
+    }
+    ul {
+        margin-top: 40px;
+        padding-left: 40px;
+        li {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+            padding-left: 24px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '・';
+                left: 2px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    p,.wp-block-quote {
+        line-height: calc(24 / 14);
+    }
+    .wp-block-quote {
+        border-left: 6px solid #023E78;
+        padding: 35px;
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 3%;
+            left: 1%;
+            content: "";
+            background-image: url(../img/news/quote.svg);
+            width: 82px;
+            height: 82px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 20px 20px;
+            z-index: -1;
+        }
+    }
+    p {
+        font-size: 14px;
+    }
+}
+.single_post_bottom_next_prev_link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    a {
+        padding: 8px 14px;
+        border:1px  solid #023E78;
+        border-radius: 4px;
+        color: #023E78;
+        &:nth-child(1),&:nth-child(2) {
+            &::before,&::after {
+                padding: 0 5px;
+            }
+        }
+        &:nth-child(1) {
+            &::before {
+                content: '<';
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                content: '>';
+            }
+        }
+    }
+}

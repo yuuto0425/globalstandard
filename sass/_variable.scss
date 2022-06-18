@@ -1,0 +1,30 @@
+// フォント指定
+$font_ja:'Noto Serif JP',sans-serif;
+$font_en:'Fira Sans', sans-serif;
+$font_title:'Amatic SC',sans-serif;
+$font_number:'Damion',sans-serif;
+// フォントカラー
+$font_default_color: #1A1A1A;
+$font_sub_default_color: #FFF400;
+$font_accent_color: #023E78;
+$font_sub_accent_color: #FFF;
+
+
+// 背景色
+$bg_default: #fff;
+$bg_sub_default: #FFF400;
+$bg_accent: #023E78;
+$bg_sub_accent: #1A1A1A;
+
+//border 
+
+$border_default:#023E78;
+$border_sub_default:#FFF400;
+$border_accent:#FFF;
+$border_sub_accent:#FFF400;
+
+// インナー幅
+$width__inner__pc: calc( 100% - 180px );
+$width__header__inner__pc: calc(100% - 40px);
+$width__inner__tab: calc( 100% - 90px);
+$width__inner__sp: calc( 100% - 60px);

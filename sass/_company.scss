@@ -1,0 +1,222 @@
+@import'reset';
+@import'common';
+@import'responsive';
+@import'variable';
+
+
+
+
+
+
+.company_message {
+    padding: 80px 0 120px;
+    .lower-inner {
+        @include mq('md') {
+            padding-right:0;
+            padding-left:0;
+        }
+        @include mq('sm') {
+            padding-right:0;
+            padding-left:0;
+        }
+    }
+}
+.company_message_items {
+
+}
+.company_message_item {
+    &:not(:first-child) {
+        margin-top: 120px;
+    }
+    &:nth-child(1) {
+        .company_message_item_bg {
+            background-image: url(../img/company/img-company01_pc.png);
+        }
+    }
+    &:nth-child(2) {
+        .company_message_item_bg {
+            background-image: url(../img/company/img-company02_pc.png);
+        }
+    }
+    .company_message_item_bg {
+        height: 350px;
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size:cover;
+        background-color: transparent;
+        color:#FFF;
+        padding: 20px;
+    }
+}
+.company_message_title {
+    padding: 10px 0;
+    font-size: 100px;
+}
+.company_message_lead {
+    font-size: 24px;
+}
+
+.company_message_item_box {
+    @include mq('sm') {
+        width: 80%;
+    }
+    width: 70%;
+    margin: -30px auto 0;
+    background-color:#FFF;
+    padding: 40px 32px;
+    box-shadow: 0 3px 12px #00000029;
+}
+.company_message_item_box_txt {
+    font-weight: bold;
+    color: #023E78;
+    font-size: 24px;
+    text-align: center;
+}
+.company_message_item_box_sub_txt {
+    margin-top: 33px;
+    line-height: calc( 24 / 14 );
+}
+
+.company_profile {
+    padding:80px 0;
+    background-image: url(../img/company/bg-case.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.company_profile_content {
+    background-color: #FFF;
+    padding: 60px 40px;
+
+}
+.company_profile_title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.company_profile_dl {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap:wrap;
+}
+.company_profile_dt,
+.company_profile_dd {
+    padding: 24px 0 40px 20px;
+}
+.company_profile_dt {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    &:not(:first-of-type) {
+        border-top: 1px solid #023E78;
+    }
+    &:first-of-type {
+        border-top:1px solid #023E78;
+    }
+    &:last-of-type {
+        border-bottom: 1px solid #023E78;
+    }
+}
+.company_profile_dd {
+    width:70%;
+    line-height: calc( 24 / 16 );
+    &:not(:first-of-type) {
+        border-top: 1px solid #ccc;
+    }
+    &:first-of-type {
+        border-top:1px solid #ccc;
+    }
+    &:last-of-type {
+        border-bottom: 1px solid #ccc;
+    }
+}
+.company_profile_dd_lists {
+    
+} 
+.company_profile_dd_list {
+    position:relative;
+    padding-left: 10px;
+    &:before {
+        content:"・";
+        left: 0;
+        position:absolute;
+    }
+} 
+
+.company_directors {
+    @include mq('sm') {
+        padding: 120px 60px;
+    }
+    padding: 120px;
+    transform: skewY(10deg);
+    background: linear-gradient( transparent 50% , #EDF3F8 50%);
+}
+.company_directors_content {
+    transform: skewY(-10deg);
+}
+.company_directors_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+.company_directors_lists {
+    margin-top: 60px;
+}
+.company_directors_list {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq('sm') {
+        flex-direction: column-reverse;
+    }
+    &:not(:first-child) {
+        margin-top: 60px;
+    }
+}
+.company_directors_list_left {
+    width:60%;
+    padding-right: 20px;
+    @include mq('sm') {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+}
+.company_directors_person {
+    display: flex;
+    align-items: center;
+    span {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 5px;
+    }
+}
+.company_directors_person_message {
+    margin-top: 32px;
+    line-height: calc(24 / 14 );
+}
+.company_directors_person_sns_links {
+    margin-top: 32px;
+    display: flex;
+}
+.company_directors_person_message_sns_link {
+    width: 32px;
+    height: 32px;
+    &:not(:first-child) {
+        margin-left: 14px;
+    }
+    a {
+        img {
+
+        }
+    }
+}
+.company_directors_img {
+    width: 40%;
+    @include mq('sm') {
+        width: 100%;
+    }
+    img {
+
+    }
+}

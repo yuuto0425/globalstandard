@@ -1,0 +1,409 @@
+@import "reset";
+@import "common";
+@import "responsive";
+@import "variable";
+
+
+.l_service_about {
+    padding: 40px 0;
+    background: linear-gradient( transparent 0% 40% , #DDE8F0 40% 70% , transparent 70% 100%);
+    transform:skewY(10deg);
+    .l_service {
+        transform: skewY(-10deg);
+    }
+}
+
+.l_service_about_title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+.l_service_about_card_items {
+    margin-top: 135px;
+}
+.l_service_about_card_item {
+    display: flex;
+    @include mq("md") {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    @include mq("sm") {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    &:not(:first-child) {
+        margin-top: 260px;
+        @include mq("md") {
+            margin-top: 60px;
+        }
+        @include mq("sm") {
+            margin-top: 60px;
+        }
+    }
+    &:nth-child(2) {
+        flex-direction: row-reverse;
+        @include mq("md") {
+            flex-direction: column-reverse;
+        }
+        @include mq("sm") {
+            flex-direction: column-reverse;
+        }
+        .l_service_about_card_item_txt_box {
+            .l_service_about_card_item_box_nam {
+                margin: -130px -20px 40px auto;
+            }
+            @include mq("md") {
+                transform: translateX(0);
+            }
+            @include mq("sm") {
+                transform: translateX(0);
+            }
+            @include mq("xl") {
+                transform: translateX(-80px);
+            }
+            @include mq("lg") {
+                transform: translateX(-80px);
+            }
+        }
+        .l_service_about_card_item_figure {
+            margin: 60px auto 0 0;
+            @include mq("md") {
+                margin: 60px auto 0 calc(50% - 50vw);
+            }
+            @include mq("sm") {
+                margin: 60px auto 0 calc(50% - 50vw);
+            }
+        }
+    }
+}
+.l_service_about_card_item_txt_box {
+    @include mq("md") {
+        width: 100%;
+        transform: translateX(0);
+        margin: -270px 0 0 0;
+    }
+    @include mq("sm") {
+        width: 100%;
+        transform: translateX(0);
+        margin: -270px 0 0 0;
+    }
+    transform: translateX(40px);
+    padding: 80px 40px 60px;
+    margin: 0 0 60px 0;
+    background-color: #fff;
+    opacity: 0.9;
+    box-shadow: 0 3px 12px #00000029;
+    width: 48%;
+    position: relative;
+    z-index: 1;
+}
+.l_service_about_card_item_box_nam {
+    // position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: -130px auto 40px -20px;
+    // top: -20px;
+    // left: 20px;
+    font-size: 100px;
+    color: #023e78;
+}
+.l_service_about_card_item_head {
+}
+.l_service_about_card_item_title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: calc(60 / 40);
+}
+.l_service_about_card_item_subtitle {
+    line-height: calc(19 / 16);
+    font-size: 16px;
+    color: #023e78;
+}
+.l_service_about_card_item_textarea {
+    margin-top: 60px;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+}
+.l_service_about_card_item_dl {
+    margin-top: 60px;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+}
+.l_service_about_card_item_dl_row {
+    padding: 33px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.l_service_about_card_item_dt {
+}
+.l_service_about_card_item_dd {
+    margin-left: 20px;
+}
+.l_service_about_card_item_btn_wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+.l_service_about_card_item_btn {
+    display: inline-block;
+    padding: 24px 80px;
+    border: 1px solid #023e78;
+    color: #023e78;
+}
+.l_service_about_card_item_figure {
+    width: 48%;
+    margin: 60px 0 0 0;
+    @include mq("md") {
+        width: 55%;
+        margin: 60px calc(50% - 50vw) 0 auto;
+    }
+    @include mq("sm") {
+        width: 55%;
+        margin: 60px calc(50% - 50vw) 0 auto;
+    }
+}
+.l_service_about_card_item_img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.l_service_flow {
+    background-image: url(../img/service/bg-service-flow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+}
+.l_service_flow_title {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+.l_service_flow_box_items {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mq('md') {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq('sm') {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.l_service_flow_box_item {
+    width: 25%;
+    @include mq("md") {
+        width: 100%;
+        display: flex;
+    }
+    @include mq("sm") {
+        width: 100%;
+        display: flex;
+    }
+    $namColorMap: (
+        1: #edf3f8,
+        2: #dde8f0,
+        3: #c7dbe9,
+        4: #b0d0e5,
+    );
+    @each$nam,$color in $namColorMap {
+        &:nth-child(#{$nam}) {
+            .l_service_flow_box_item_body {
+                background-color: $color;
+            }
+        }
+    }
+    $namColorMap: (
+        1: #edf3f8,
+        2: #dde8f0,
+        3: #c7dbe9,
+    );
+    @mixin flowBoxAfter() {
+        z-index: 1;
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    @each $nam, $color in $namColorMap {
+        &:nth-child(#{$nam}) {
+            .l_service_flow_box_item_body {
+                position: relative;
+                @include mq("xl") {
+                    &::after {
+                        @include flowBoxAfter();
+                        top: 50%;
+                        right: -20px;
+                        transform: translateY(-50%);
+                        border-width: 8.16406vw 0 8.16406vw 20px;
+                        border-color: transparent transparent transparent $color;
+                    }
+                }
+                @include mq("lg") {
+                    &::after {
+                        @include flowBoxAfter();
+                        top: 50%;
+                        right: -20px;
+                        transform: translateY(-50%);
+                        border-width: 8.16406vw 0 8.16406vw 20px;
+                        border-color: transparent transparent transparent $color;
+                    }
+                }
+                @include mq("md") {
+                    &::after {
+                        @include flowBoxAfter();
+                        bottom: -20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-width: 20px 25vw 0 25vw;
+                        border-color:$color transparent transparent transparent ;
+                    }
+                }
+                @include mq("sm") {
+                    &::after {
+                        @include flowBoxAfter();
+                        bottom: -20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-width: 20px 35vw 0 35vw;
+                        border-color:$color transparent transparent transparent ;
+                    }
+                }
+            }
+        }
+    }
+}
+.l_service_flow_box_item_step_nam {
+    font-size: 20px;
+    color: #fff400;
+    span {
+        font-size: 40px;
+    }
+    @include mq("md") {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        letter-spacing: 0.1em;
+        span {
+            margin-top: 5px;
+            letter-spacing: .01em;
+        }
+    }
+    @include mq("sm") {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        letter-spacing: 0.1em;
+        span {
+            margin-top: 5px;
+            letter-spacing: .01em;
+        }
+    }
+    @include mq('xl') {
+        span {
+            margin-left: 8px;
+            display: inline-block;
+        }
+    }
+    @include mq('lg') {
+        span {
+            margin-left: 8px;
+            display: inline-block;
+        }
+    }
+}
+.l_service_flow_box_item_body {
+    padding: 55px;
+    @include mq("md") {
+        width: 80%;
+    }
+    @include mq("sm") {
+        width: 80%;
+    }
+}
+.l_service_flow_box_item_body_title {
+    color: #023e78;
+    font-size: 20px;
+    font-weight: bold;
+    @include mq("md") {
+        text-align: center;
+    }
+    @include mq("sm") {
+        text-align: center;
+    }
+}
+.l_service_flow_box_item_body_lead {
+    line-height: calc(24 / 14);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.l_service_qa {
+    padding: 160px 0;
+}
+.l_service_qa_title {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+.l_service_qa_items {
+    max-width: 688px;
+    margin: 60px auto 0;
+}
+.l_service_qa_item {
+}
+.l_service_qa_item_question {
+    padding: 32px 20px 32px 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: calc(29 / 20);
+    position: relative;
+    cursor: pointer;
+    transition: color 1s ease 0s;
+    &.is-open {
+        color: #e61264;
+        &::before {
+            background-color: #e61264;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &::after {
+            background-color: #e61264;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+    &::before {
+        transition: transform 1s ease 0s;
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #000;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        transition: transform 1s ease 0s;
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #000;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+.l_service_qa_item_answer {
+    display: none;
+}
